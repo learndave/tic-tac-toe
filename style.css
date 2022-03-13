@@ -1,0 +1,114 @@
+:root {
+    --color-lighter: rgb(193, 248, 207);
+    --color-base: rgb(79, 211, 196);
+    --color-darker: rgb(72, 143, 177);
+    --color-darkest: rgb(83, 62, 133);
+}
+
+* { 
+    /* NO TEXT SELECT */ 
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}
+
+* {
+    font-family: 'Roboto Slab', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    padding: 50px;
+
+    background-color: var(--color-lighter);
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: max(60vw, 400px);
+    border-radius: 30px;
+    padding: 30px;
+
+    background-color: var(--color-base);
+    gap: 60px;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-darkest);
+}
+
+.gamezone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+    
+    width: max(40vh, 300px);
+    height: max(40vh, 300px);
+
+    border-radius: 20px;
+}
+
+.grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: dashed var(--color-darkest) 2px;
+    
+    border-radius: 12px;
+
+    font-size: 72px;
+    font-weight: 800;
+}
+
+.grid.x {
+    border: solid var(--color-lighter) 5px;
+    background-color: var(--color-darkest);
+    color: var(--color-lighter);
+}
+
+.grid.o {
+    border: solid var(--color-darkest) 5px;
+    background-color: var(--color-lighter);
+    color: var(--color-darkest);
+}
+
+.grid:hover {
+    border: solid 5px;
+}
+
+.grid.x:hover {
+    border-color: var(--color-lighter);
+}
+
+.grid.o:hover {
+    border-color: var(--color-darkest);
+}
+
+.turn {
+    color: var(--color-darkest);
+    font-weight: 700;
+    font-size: 54px;
+}
